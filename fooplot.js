@@ -35,7 +35,7 @@ var abrir=false;
 var varst="";
 
 
-function myFunction(){
+function yFunction(){
   varst=document.getElementById("idedietexto").value;;
 valorid=0
 abrir=true;
@@ -46,6 +46,9 @@ theplot1.reDraw();
 //theplot.addPlot('3^2',1);
   alert(varst);
   console.log("final "+valordey);
+
+  text=valordey;
+refreshText();
 }
 
 

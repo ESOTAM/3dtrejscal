@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - geometry - text</title>
+		<title>Calculo 3d</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -24,26 +24,37 @@
 
 
 			#idedietexto{
-
+ background-color: Transparent;
+ color: white;
 
 			}
+
+
+
+      #button {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
+}
 		</style>
 	</head>
 	<body>
 
 		<div id="info">
-		<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> - procedural 3D text by <a href="http://www.lab4games.net/zz85/blog" target="_blank" rel="noopener">zz85</a> &amp; alteredq
-		<br/>type to enter new text, drag to spin the text
+		<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> Caoculo 3d by ing <a href="" target="_blank" rel="noopener">Enterprise</a> 
+		<br/>
 		<br/><span class="button" id="color">change color</span>,
 			<span class="button" id="font">change font</span>,
 			<span class="button" id="weight">change weight</span>,
 			<span class="button" id="bevel">change bevel
  
 			</span>
-			<a id="permalink" href="#">permalink</a>
+			<a id="permalink" href="#"></a>
 
             <input id ="idedietexto" type="text" >
-			<button onclick="yFunction()">Click me</button>
+			<button onclick="yFunction()">calculo</button>
 		</div>
 
 
@@ -52,7 +63,7 @@
 
 		<script src="Detector.js"></script>
 		<script src="stats.min.js"></script>
-
+<div id="mirender"></div>
 		<script>
 
 			function yFunction(){
@@ -108,7 +119,7 @@
 				return hex.toUpperCase();
 			}
 			function init() {
-				container = document.createElement( 'div' );
+				container =document.getElementById("mirender");// document.createElement( 'div' );
 				document.body.appendChild( container );
 				permalink = document.getElementById( "permalink" );
 				// CAMERA
@@ -169,7 +180,8 @@
 				stats = new Stats();
 				//container.appendChild( stats.dom );
 				// EVENTS
-				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+        document.getElementById("mirender").addEventListener( 'mousedown', onDocumentMouseDown, false );
+				//document.addEventListener( 'mousedown', onDocumentMouseDown, true );
 				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 				document.addEventListener( 'keypress', onDocumentKeyPress, false );
@@ -317,7 +329,7 @@
 				targetRotationOnMouseDown = targetRotation;
 			}
 			function onDocumentMouseMove( event ) {
-				mouseX = event.clientX - windowHalfX;
+				mouseX = (event.clientX - windowHalfX)*0.4;
 				targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
 			}
 			function onDocumentMouseUp( event ) {
@@ -357,6 +369,7 @@
 				renderer.render( scene, camera );
 			}
 		</script>
-
+<script type="text/javascript" src="fooplot.js" charset="utf-8"></script>
+    <div id="container"></div>
 	</body>
 </html>
