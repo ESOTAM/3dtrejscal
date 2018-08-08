@@ -31,19 +31,37 @@
 
 
 
-      #button {     
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;        
+#myButton {	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background-color:transparent;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
 }
+#myButton:hover {
+	
+}
+#myButton:active {
+	position:relative;
+	top:1px;
+}
+
 		</style>
 	</head>
 	<body>
 
 		<div id="info">
-		<a href="" target="_blank" rel="noopener">Calculo 3d</a> Calculo 3D by Esotam  <a href="" target="_blank" rel="noopener">Enterprise</a> 
+		<a href="" target="_blank" rel="noopener">Scientific Calculator 3D</a>  by Esotam  <a href="" target="_blank" rel="noopener">Enterprise</a> 
 		<br/>
 		<br/><span class="button" id="color">change color</span>,
 			<span class="button" id="font">change font</span>,
@@ -52,9 +70,9 @@
  
 			</span>
 			<a id="permalink" href="#"></a>
-
-            <input id ="idedietexto" type="text" >
-			<button onclick="yFunction()">calculo</button>
+<div id ="idedt" ><input id ="idedietexto" type="text" >
+			<button id="myButton" onclick="yFunction()">calculo</button></div>
+            
 		</div>
 
 
@@ -66,17 +84,30 @@
 <div id="mirender"></div>
 		<script>
 
-			function yFunction(){
+poscionaredti(1,2);
 
-				alert(document.getElementById("idedietexto").value);
-			}
+function poscionaredti(x,y){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+		
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			THREE.Cache.enabled = true;
 			var container, stats, permalink, hex, color;
 			var camera, cameraTarget, scene, renderer;
 			var group, textMesh1, textMesh2, textGeo, materials;
 			var firstLetter = true;
-			var text = "three.js",
+			var text = "Scientific Calculator",
 				height = 20,
 				size = 70,
 				hover = 30,
